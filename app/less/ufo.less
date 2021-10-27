@@ -1,0 +1,308 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  .city {
+    background: url("../img/dest/city.webp") center center / cover no-repeat no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+
+  .ufo_left {
+    background: url("../img/dest/nlo372-639.webp") center center / contain no-repeat no-repeat;
+    position: absolute;
+    width: 220px;
+    height: 375px;
+    z-index: 19;
+    top: 24.4%;
+    left: 4.9%;
+    transform: translateY(-100%);
+    animation: ease-out ufo_visibility 3s 1s forwards, ease-out ufo_active 3s 4s infinite;
+
+    .wrap_laser {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 23;
+
+      .laser_static {
+        background: url("../img/dest/laser3.webp") center center / cover no-repeat no-repeat;
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        top: 89px;
+        left: 63px;
+        opacity: .1;
+        z-index: 23;
+        animation: linear laser_static 10s 1s infinite;
+      }
+
+      .laser_dynamic {
+        background: url(../img/dest/laser1.webp) center center/contain no-repeat no-repeat;
+        width: 920px;
+        height: 800px;
+        position: absolute;
+        top: -54px;
+        left: -376px;
+        transform: rotate(124deg);
+        opacity: 0;
+        z-index: 23;
+        animation: linear laser_dynamic 7s 7s infinite;
+      }
+    }
+
+    .wrap_fly_people {
+      position: relative;
+      width: 43px;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      background: linear-gradient(0deg, transparent, rgba(0, 217, 255, 0.53), rgba(0, 166, 255, 0.75), rgba(0, 217, 255, 0.53), transparent);
+      transform: translate(85px, -11px);
+      opacity: 0;
+      animation: linear opacity_people 1s 8s forwards;
+
+      .people {
+        background: url(../img/dest/people_fly1.webp) center center/contain repeat repeat;
+        height: 10000px;
+        width: 30px;
+        position: absolute;
+        top: 0;
+        left: 7px;
+        opacity: .85;
+        animation: linear people_up 500s 8s infinite;
+      }
+    }
+  }
+
+  .ufo_center {
+    background: url("../img/dest/nlo372-639.webp") center center / contain no-repeat no-repeat;
+    position: absolute;
+    width: 372px;
+    height: 639px;
+    z-index: 21;
+    top: calc(50% - 311px);
+    left: calc(50% - 99px);
+    transform: translateY(-100%);
+    animation: ease-out ufo_visibility 3s 4s forwards, ease-out ufo_active 3s 7s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .wrap_laser {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 23;
+
+      .laser_static {
+        background: url("../img/dest/laser3.webp") center center / cover no-repeat no-repeat;
+        width: 110px;
+        height: 110px;
+        position: absolute;
+        top: 174px;
+        left: 130px;
+        opacity: .1;
+        z-index: 24;
+        animation: linear laser_static 10s 1s infinite;
+      }
+
+      .laser_dynamic {
+        background: url(../img/dest/laser1.webp) center center/contain no-repeat no-repeat;
+        width: 920px;
+        height: 800px;
+        position: absolute;
+        top: 33px;
+        left: -328px;
+        transform: rotate(134deg);
+        opacity: 0;
+        z-index: 23;
+        animation: linear laser_dynamic 7s 10s infinite;
+      }
+    }
+
+    .wrap_fly_people {
+      position: relative;
+      width: 50px;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      background: linear-gradient(0deg, transparent, rgba(0, 217, 255, 0.53), rgba(0, 166, 255, 0.75), rgba(0, 217, 255, 0.53), transparent);
+      transform: translateY(305px);
+      opacity: 0;
+      animation: linear opacity_people 1s 5s forwards;
+
+      .people {
+        background: url(../img/dest/people_fly1.webp) center center/contain repeat repeat;
+        height: 10000px;
+        width: 30px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        opacity: .7;
+        animation: linear people_up 500s 5s infinite;
+      }
+    }
+  }
+
+  .ufo_right {
+    background: url("../img/dest/nlo372-639.webp") center center / contain no-repeat no-repeat;
+    position: absolute;
+    width: 198px;
+    height: 351px;
+    z-index: 18;
+    top: 31.7%;
+    right: 16%;
+    transform: translateY(-100%);
+    animation: ease-out ufo_visibility 3s 2s forwards, ease-out ufo_active 3s 5s infinite;
+
+    @media screen and (max-width: 700px) {
+      display: none;
+    }
+
+    .wrap_laser {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 23;
+
+      .laser_static {
+        background: url("../img/dest/laser3.webp") center center / cover no-repeat no-repeat;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: 91px;
+        left: 64px;
+        opacity: .1;
+        z-index: 23;
+        animation: linear laser_static 10s 1s infinite;
+      }
+
+      .laser_dynamic {
+        background: url(../img/dest/laser1.webp) center center/contain no-repeat no-repeat;
+        width: 920px;
+        height: 800px;
+        position: absolute;
+        top: -117px;
+        left: -226px;
+        transform: rotate(78deg);
+        opacity: 0;
+        z-index: 23;
+        animation: linear laser_dynamic 7s 5s infinite;
+      }
+    }
+
+    .wrap_fly_people {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 40px;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      background: linear-gradient(0deg, transparent, rgba(0, 217, 255, 0.53), rgba(0, 166, 255, 0.75), rgba(0, 217, 255, 0.53), transparent);
+      transform: translate(79px, -14px);
+      opacity: 0;
+      animation: linear opacity_people 1s 7s forwards;
+
+      .people {
+        background: url(../img/dest/people_fly1.webp) center center/contain repeat repeat;
+        height: 10000px;
+        width: 30px;
+        position: absolute;
+        top: 0;
+        left: 5px;
+        animation: linear people_up 500s 7s infinite;
+      }
+    }
+  }
+
+  .cloud {
+    background: url("../img/dest/cloud.webp") center center / cover no-repeat no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+  }
+}
+
+@keyframes ufo_visibility {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(70px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes ufo_active {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(3px);
+  }
+  75% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes laser_static {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes laser_dynamic {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: .8;
+  }
+  2% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes people_up {
+  0% {
+    transform: translateY(0px);
+  }
+  99% {
+    transform: translateY(-10000px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes opacity_people {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
